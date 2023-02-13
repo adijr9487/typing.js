@@ -1,0 +1,100 @@
+.quotes-ul{
+    list-style: none;
+    overflow-y: scroll;
+    max-height: 90vh;
+}
+.quotes-ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    box-shadow: 0 0 4px #c8c8c8;
+    border-radius: 5px;
+}
+.quote-box{
+    width: 100%;
+}
+.quote{
+    background-color: #eeeeee;
+    width: 100%;
+    box-shadow: 0 0 5px #e8e8e8;
+}
+.quote-info{
+    box-sizing: border-box;
+    border: none;
+}
+.card-textarea{
+    width: 100%;
+    border: 2px solid transparent;
+    box-shadow: 0 0 5px #d2d2d2;
+    outline: none;
+    transition: 0.3s;
+}
+.card-body{
+    border-radius: 5px;
+}
+.card-textarea:focus{
+    border: 2px solid #cacaca;
+}
+.card-timer{
+    font-size: 2.5rem;
+}
+.correct .card-body{
+    background-color: #6BCB77;
+}
+.incorrect .card-body{
+    background-color: #FF6B6B;
+}
+.pending .card-body{
+    background-color: #FFD93D;
+}
+.passed_li{
+    transition: 0.3s;
+    animation: 0.3s appear ease-out;
+}
+
+@keyframes appear{
+    0%{
+        transform: translate(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+.quotes-passed{
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+.side-bar{
+    height: 90vh;
+}
+.model-box{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    flex-direction: column;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background-color: #00000075;
+}
+.show-result{
+    display: flex;
+}
+.box-card{
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+.table{
+    width: 80vw;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 70vh;
+    overflow-y: scroll;
+}

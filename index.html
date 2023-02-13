@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Quotes</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="quotes.js"></script>
+    <script defer src="clock.js"></script>
+    <script defer src="action.js"></script>
+
+</head>
+<body>
+    
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid" style="display: flex; justify-content: center;">
+            <span class="navbar-brand mb-0 h1">Typing Quotes</span>
+        </div>
+    </nav>
+
+
+
+    <div class="row">
+        <div class="col-md-3 side-bar p-4">
+            <div class="card">
+                <div class="form p-2" style="display: flex; flex-flow: column;">
+                    <input type="text" class="form-input" placeholder="Number of Quotes = 2">
+                    <button class="btn btn-primary mt-2 start">Start</button>
+                </div>
+            </div>
+        </div>
+        <ul class="quotes-ul col-md-9 p-3">
+            <div>
+                <li class="current_li">
+                    <!-- <div class="row quote-box" style="width: 100%;">
+                        <div class="col-md-8 card p-2 quote-info">
+                            <div class="card-body quote mb-2">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="card-body-text-area">
+                                <textarea type="textarea" class="card-textarea card-body"></textarea>
+                            </div>
+                        </div>
+                        <div class="card col-md-4 quote-info">
+                            <div class="card-body">
+                                <p class="card-li">1/10</p>
+                                <h6 class="card-status mb-2 text-muted">Pending</h6>
+                                <h5 class="card-timer current-timer">00:34</h5>
+                            </div>
+                        </div>
+                    </div> -->
+                </li>
+            </div>
+            <div class="quotes-passed"></div>
+        </ul>
+    </div>
+
+    <div class="model-box">
+        <div class="card p-2 box-card">
+            <table class="table table-light">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <!-- <th scope="col">Name</th> -->
+                        <th scope="col">Score</th>
+                        <th scope="col">Average Time</th>
+                        <th scope="col">Cumulative Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-active">
+                        <th scopr="row">1</th>  
+                        <td class="table-active">Muzan Kibutsuji</td>
+                        <td>10/10</td>
+                        <td>00:20:20</td>
+                        <td>00:10:10</td>
+                    </tr>
+                    <tr class="table-ligth">
+                        <th scopr="row">2</th>  
+                        <td>Tanjiro Kamado</td>
+                        <td>9/10</td>
+                        <td>00:20:20</td>
+                        <td>00:10:10</td>
+                    </tr>
+                    <tr class="table-ligth">
+                        <th scopr="row">2</th>  
+                        <td>Zenitsu</td>
+                        <td>9/10</td>
+                        <td>00:10:20</td>
+                        <td>00:10:10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button class="btn btn-danger m-2" onclick="closeModel()"> Close</button>
+    </div>
+        
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+
+</body>
+</html>
