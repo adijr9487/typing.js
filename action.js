@@ -205,14 +205,7 @@ function closeModel(){
     MODEL.classList.remove('show-result')
 }
 
-START.addEventListener('click', ()=>{
-    let number_of_quotes = NUM_OF_QUO.value;
-    QUOTE_PASSED.innerHTML = ''
-    const game = new Game(number_of_quotes)
-    game.initialize_game()
-    game.start_game()
-})
-START.addEventListener('click', ()=>{
+START.addEventListener('click', (e)=>{
     let number_of_quotes = NUM_OF_QUO.value;
     QUOTE_PASSED.innerHTML = ''
     const game = new Game(number_of_quotes)
