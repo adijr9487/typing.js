@@ -6586,3 +6586,93 @@ function randomArrayElements(n) {
     }
     return arr;
 }
+
+
+class Quote{
+    
+  constructor(quote, author, index){
+      this.quote = quote;
+      this.author = author
+      this.input = "";
+      this.timer = new Clock()
+      this.status = "queued"
+      this.result = "pending"
+      this.index = index
+  }
+
+  getTime(){
+      return this.timer.minute + ":" + this.timer.second + ":" + this.timer.millisecond
+  }
+
+  start(span){
+      this.timer.trigger_clock(span)
+      this.status = "running"
+  }
+
+  getInput(){
+      this.input = document.querySelector(".current_li textarea").value
+  }
+
+  end(){
+      this.timer.stop()
+      this.status = "end"
+      this.getInput()
+      if (this.quote === this.input){
+          this.result = 'correct'
+      }else{
+          this.result = 'incorrect'
+      }
+  }
+
+  get_quote_box(){
+      return `
+      <div class="row quote-box ${this.result} p-2" style="width: 100%;">
+          <div class="col-md-8 card quote-info">
+              <div class="card-body quote mb-2">
+                  <p class="card-text">${this.quote}</p>
+              </div>
+              <div class="card-body-text-area">
+                  <textarea type="textarea" class="card-textarea card-body">${this.input}</textarea>
+              </div>
+          </div>
+          <div class="card col-md-4 quote-info">
+              <div class="card-body">
+                  <p class="card-li">${this.index}</p>
+                  <h6 class="card-status mb-2 text-muted">${this.status}</h6>
+                  <h5 class="card-timer">${this.getTime()}</h5>
+                  <h5 class="card-status">${this.result}</h5>
+              </div>
+          </div>
+      </div>`
+  }
+
+  render(game){
+      CURRENT_QUOTE.innerHTML = this.get_quote_box()
+      
+      CURRENT_QUOTE.querySelector('textarea').classList.add('current-textarea')
+      CURRENT_QUOTE.querySelector('.card-timer').classList.add('current-timer')
+              
+      let span = document.querySelector(".current-timer")
+      
+      document.querySelector(".current-textarea").addEventListener("keypress", (e)=>{
+          if(this.status === "running"){
+              if(e.code === "Enter"){
+                  this.end()
+                  let li = document.createElement('li');
+                  li.classList.add('passed_li')
+                  li.innerHTML = this.get_quote_box();
+                  li.querySelector('textarea').setAttribute('disabled', true)
+                  QUOTE_PASSED.appendChild(li);
+                  game.enter_quote();
+              }
+          }
+          if(this.status === "queued"){
+              this.start(span);
+          }
+      })
+  }
+
+  render_time(){
+      CURRENT_TIMER.innerHTML = this.getTime()
+  }
+}
