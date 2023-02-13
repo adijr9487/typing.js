@@ -23,6 +23,10 @@ class Clock{
         this.millisecond = time_in_ms;
     }
 
+    getTime(){
+        return `${this.hour}:${this.minute<10 ? '0' : ''}${this.minute}:${this.second<10 ? '0' : ''}${this.second}:${this.millisecond<10 ? '0' : ''}${this.millisecond/10}`
+    }
+
     addClock(clock){
         this.millisecond += clock.millisecond;
 

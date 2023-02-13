@@ -25,10 +25,13 @@
 
 
     <div class="row">
-        <div class="col-md-3 side-bar">
-            <button class="btn btn-secondary">
-                Restart
-            </button>
+        <div class="col-md-3 side-bar p-4">
+            <div class="card">
+                <form class="form p-2" style="display: flex; flex-flow: column;">
+                    <input type="text" class="form-input" placeholder="Number of Quotes">
+                    <button class="btn btn-primary mt-2 start">Start</button>
+                </form>
+            </div>
         </div>
         <ul class="quotes-ul col-md-9 p-3">
             <div>
@@ -52,22 +55,49 @@
                     </div> -->
                 </li>
             </div>
-            <div class="quotes-passed">
-
-            </div>
+            <div class="quotes-passed"></div>
         </ul>
     </div>
 
-    <!-- <div class="model-box">
-        <div class="card model">
-            <h5 class="card-header">Result</h5>
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Close</a>
-            </div>
+    <div class="model-box">
+        <div class="card p-2 box-card">
+            <table class="table table-light">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <!-- <th scope="col">Name</th> -->
+                        <th scope="col">Score</th>
+                        <th scope="col">Average Time</th>
+                        <th scope="col">Cumulative Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-active">
+                        <th scopr="row">1</th>  
+                        <td class="table-active">Muzan Kibutsuji</td>
+                        <td>10/10</td>
+                        <td>00:20:20</td>
+                        <td>00:10:10</td>
+                    </tr>
+                    <tr class="table-ligth">
+                        <th scopr="row">2</th>  
+                        <td>Tanjiro Kamado</td>
+                        <td>9/10</td>
+                        <td>00:20:20</td>
+                        <td>00:10:10</td>
+                    </tr>
+                    <tr class="table-ligth">
+                        <th scopr="row">2</th>  
+                        <td>Zenitsu</td>
+                        <td>9/10</td>
+                        <td>00:10:20</td>
+                        <td>00:10:10</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </div> -->
+        <button class="btn btn-danger m-2" onclick="closeModel()"> Close</button>
+    </div>
         
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>

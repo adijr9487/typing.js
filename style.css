@@ -3,6 +3,14 @@
     overflow-y: scroll;
     max-height: 90vh;
 }
+.quotes-ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    box-shadow: 0 0 4px #c8c8c8;
+    border-radius: 5px;
+}
 .quote-box{
     width: 100%;
 }
@@ -68,13 +76,25 @@
     height: 100vh;
     width: 100vw;
     position: absolute;
-    display: flex;
+    flex-direction: column;
+    display: none;
     justify-content: center;
     align-items: center;
     top: 0;
     left: 0;
     background-color: #00000075;
 }
-.model{
-
+.show-result{
+    display: flex;
+}
+.box-card{
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+.table{
+    width: 80vw;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 70vh;
+    overflow-y: scroll;
 }
